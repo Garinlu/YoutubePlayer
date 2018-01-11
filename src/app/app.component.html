@@ -7,8 +7,10 @@
 <div class="ui container">
     <div class="ui message">
         <div class="ui input">
-            <input type="text" [(ngModel)]="url_tmp" name="url" placeholder="Write an url...">
-            <input type="button" (click)="goUrl()" value="Watch the video">
+            <form>
+                <input type="text" [(ngModel)]="url_tmp" name="url" placeholder="Write an url...">
+                <input type="button" (click)="goUrl()" value="Watch the video">
+            </form>
         </div>
         <app-video *ngIf="url" [url]="url"></app-video>
     </div>

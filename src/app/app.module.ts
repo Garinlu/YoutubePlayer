@@ -7,6 +7,7 @@ import { HistoryComponent } from './history/history.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { VideoComponent } from './video/video.component';
 import {FormsModule} from '@angular/forms';
+import { UrlYtPipe } from './url-yt.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {FormsModule} from '@angular/forms';
         AppComponent,
         HistoryComponent,
         BookmarksComponent,
-        VideoComponent
+        VideoComponent,
+        UrlYtPipe
     ],
     imports: [
         BrowserModule,

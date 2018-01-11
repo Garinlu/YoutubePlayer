@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import * as _ from 'lodash';
 import {DomSanitizer} from '@angular/platform-browser';
 
 
@@ -15,9 +14,6 @@ export class VideoComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.url);
-        this.url = _.replace(this.url, 'watch?v=', 'embed/');
-        console.log(this.url);
     }
 
 
