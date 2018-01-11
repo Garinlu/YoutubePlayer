@@ -4,6 +4,15 @@
         <app-history></app-history>
     </div>
 </div>
+<div class="ui container">
+    <div class="ui message">
+        <div class="ui input">
+            <input type="text" [(ngModel)]="url_tmp" name="url" placeholder="Write an url...">
+            <input type="button" (click)="goUrl()" value="Watch the video">
+        </div>
+        <app-video *ngIf="url" [url]="url"></app-video>
+    </div>
+</div>
 <div class="ui right fixed vertical menu">
     <a class="item"><b>Bookmarks</b></a>
     <app-bookmarks></app-bookmarks>

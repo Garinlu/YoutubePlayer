@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import { HistoryComponent } from './history/history.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { VideoComponent } from './video/video.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { VideoComponent } from './video/video.component';
     ],
     imports: [
         BrowserModule,
-        SuiModule
+        SuiModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
