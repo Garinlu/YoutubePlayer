@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {AppComponent} from '../app.component';
+import {UrlService} from '../url.service';
 
 @Component({
-  selector: 'app-bookmarks',
-  templateUrl: './bookmarks.component.html',
-  styleUrls: ['./bookmarks.component.css']
+    selector: 'app-bookmarks',
+    templateUrl: './bookmarks.component.html',
+    styleUrls: ['./bookmarks.component.css']
 })
-export class BookmarksComponent implements OnInit {
+export class BookmarksComponent {
+    @Input() bookMarks: string[];
 
-  constructor() { }
+    constructor(private appComponent: AppComponent, private urlServ: UrlService) {
+    }
+    goToUrl(url) {
+        this.appComponent.goUrl(url);
+    }
 
-  ngOnInit() {
-  }
-
+    remove(url) {
+        this.bookMarks = this.urlServ.removeBookMArk(url);
+    }
 }

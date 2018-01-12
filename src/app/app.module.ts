@@ -8,6 +8,7 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { VideoComponent } from './video/video.component';
 import {FormsModule} from '@angular/forms';
 import { UrlYtPipe } from './url-yt.pipe';
+import {UrlService} from './url.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { UrlYtPipe } from './url-yt.pipe';
         SuiModule,
         FormsModule
     ],
-    providers: [],
+    providers: [UrlService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

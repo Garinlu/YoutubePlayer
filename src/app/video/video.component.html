@@ -1,4 +1,6 @@
 <h1 class="ui header">Youtube Player</h1>
-<iframe width="420" height="315"
+<iframe *ngIf="url" width="420" height="315"
         [src]="sanitizer.bypassSecurityTrustResourceUrl(url | urlYt)" frameborder="0" allowfullscreen>
 </iframe>
+<div class="ui message" *ngIf="!url" style="width: 420px; height: 315px;">
+</div>

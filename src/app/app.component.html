@@ -1,7 +1,7 @@
 <div class="ui left fixed vertical menu">
     <a class="item ui header">YoutubePlayer</a>
     <div class="item">
-        <app-history></app-history>
+        <app-history [history]="history"></app-history>
     </div>
 </div>
 <div class="ui container">
@@ -9,13 +9,16 @@
         <div class="ui input">
             <form>
                 <input type="text" [(ngModel)]="url_tmp" name="url" placeholder="Write an url...">
-                <input type="button" (click)="goUrl()" value="Watch the video">
+                <input type="button" (click)="goUrl(url_tmp)" value="Watch the video">
             </form>
         </div>
-        <app-video *ngIf="url" [url]="url"></app-video>
+        <app-video [url]="url"></app-video>
+        <div *ngIf="url" class="ui green icon button" (click)="addToMarks(url)">
+            <i class="add icon"></i> Add to bookmarks
+        </div>
     </div>
 </div>
 <div class="ui right fixed vertical menu">
     <a class="item"><b>Bookmarks</b></a>
-    <app-bookmarks></app-bookmarks>
+    <app-bookmarks [bookMarks]="bookMarks"></app-bookmarks>
 </div>

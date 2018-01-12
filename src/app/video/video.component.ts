@@ -7,14 +7,10 @@ import {DomSanitizer} from '@angular/platform-browser';
     templateUrl: './video.component.html',
     styleUrls: ['./video.component.css']
 })
-export class VideoComponent implements OnInit {
+export class VideoComponent {
     @Input() url: string;
 
     constructor(public sanitizer: DomSanitizer) {
     }
-
-    ngOnInit() {
-    }
-
 
 }

@@ -1,24 +1,14 @@
+<button *ngIf="history" class="ui red icon small button" (click)="clearHistory()">
+    <i class="remove icon"></i> Clear history
+</button>
+
 <b>History</b>
+
 <div class="ui relaxed divided list">
-    <div class="item">
+    <div class="item" *ngFor="let url of history;let index = index;" [(ngModel)]="history[index]" ngDefaultControl>
         <i class="large youtube middle aligned icon"></i>
         <div class="content">
-            <a class="header">Semantic-Org/Semantic-UI</a>
-            <div class="description">Added the 11/01/2018</div>
-        </div>
-    </div>
-    <div class="item">
-        <i class="large youtube middle aligned icon"></i>
-        <div class="content">
-            <a class="header">Semantic-Org/Semantic-UI-Docs</a>
-            <div class="description">Added the 11/01/2018</div>
-        </div>
-    </div>
-    <div class="item">
-        <i class="large youtube middle aligned icon"></i>
-        <div class="content">
-            <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
-            <div class="description">Added the 11/01/2018</div>
+            <a class="header" (click)="goToUrl(url)">{{url}}</a>
         </div>
     </div>
 </div>
