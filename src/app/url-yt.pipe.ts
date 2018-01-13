@@ -6,10 +6,9 @@ import * as _ from 'lodash';
 })
 export class UrlYtPipe implements PipeTransform {
 
-
+    //Transform the Youtube URL to a iframe url
     transform(url: string): string {
         return _.replace(url, 'watch?v=', 'embed/');
-
     }
 
 }
