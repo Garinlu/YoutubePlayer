@@ -12,11 +12,14 @@ export class BookmarksComponent {
 
     constructor(private appComponent: AppComponent, private urlServ: UrlService) {
     }
+
+    //Watch the video with this url
     goToUrl(url) {
         this.appComponent.goUrl(url);
     }
 
+    //Remove an url form the bookmarks
     remove(url) {
-        this.bookMarks = this.urlServ.removeBookMArk(url);
+        this.bookMarks = this.urlServ.removeBookMarks(url);
     }
 }

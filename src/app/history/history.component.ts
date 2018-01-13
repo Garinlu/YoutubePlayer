@@ -13,10 +13,12 @@ export class HistoryComponent {
     constructor(private appComponent: AppComponent, private urlServ: UrlService) {
     }
 
+    //Watch the video with this url
     goToUrl(url) {
         this.appComponent.goUrl(url);
     }
 
+    //Remove all the history
     clearHistory() {
         this.history = this.urlServ.clearHistory();
     }
